@@ -1,0 +1,11 @@
+<ul>
+    {% for i in products %}
+    <li>
+        <p><a href="{% url 'product_detail' i.pk %}">Name: {{i.product_name}}</a></p>
+        <p>Price: {{i.price}}</p>
+    </li>
+
+    {% endfor %}
+</ul>
+
+<button><a href="{% url 'product_create' %}">Create</a></button>
